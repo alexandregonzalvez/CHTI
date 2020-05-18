@@ -25,7 +25,7 @@ timer_callback proc
 	bhs fin
 	
 	;r7 = echantillon a traiter et jouer
-	ldr r7, [r6, r4]
+	ldrh r7, [r6, r4]
 	;operation sur les echantillons
 	;addition
 	add r7, #32768
@@ -40,9 +40,10 @@ timer_callback proc
 	ldr r9, =TIM3_CCR3
 	str r7, [r9]
 	; incrementation de la position
-	add r4, #1
+	add r4, #2
 	ldr r10, =E_POS
-	ldr r9, [r8, r10]
+	mov r9, r8
+	add r9, r10
 	str r4, [r9]
 	
 fin	pop {r4, r5, r6, r7, r8, r9, r10}

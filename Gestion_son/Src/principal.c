@@ -1,8 +1,8 @@
 #include "gfssp72.h"
 
 void timer_callback(void);
-u32 Periode_PWM_en_Tck = 9;
-u32 Periode_en_Tck = 91;
+u32 Periode_PWM_en_Tck = 648;
+u32 Periode_en_Tck = 6552;
 
 typedef struct {
 	int position;		// index courant dans le tableau d'echantillons

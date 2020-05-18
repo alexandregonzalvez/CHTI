@@ -40,7 +40,7 @@ ARM Macro Assembler    Page 1
    25 00000024 D218            bhs              fin
    26 00000026         
    27 00000026         ;r7 = echantillon a traiter et jouer
-   28 00000026 5937            ldr              r7, [r6, r4]
+   28 00000026 5B37            ldrh             r7, [r6, r4]
    29 00000028         ;operation sur les echantillons
    30 00000028         ;addition
    31 00000028 F507 4700       add              r7, #32768
@@ -55,22 +55,23 @@ ARM Macro Assembler    Page 1
    40 00000040 F8DF 9020       ldr              r9, =TIM3_CCR3
    41 00000044 F8C9 7000       str              r7, [r9]
    42 00000048         ; incrementation de la position
-   43 00000048 F104 0401       add              r4, #1
+   43 00000048 F104 0402       add              r4, #2
    44 0000004C F04F 0A00       ldr              r10, =E_POS
-   45 00000050 F858 900A       ldr              r9, [r8, r10]
-   46 00000054 F8C9 4000       str              r4, [r9]
-   47 00000058         
-   48 00000058 E8BD 07F0 
+   45 00000050 46C1            mov              r9, r8
+   46 00000052 44D1            add              r9, r10
+   47 00000054 F8C9 4000       str              r4, [r9]
+   48 00000058         
+   49 00000058 E8BD 07F0 
                        fin     pop              {r4, r5, r6, r7, r8, r9, r10}
-   49 0000005C BD00            pop              {pc}
 
 
 
 ARM Macro Assembler    Page 2 
 
 
-   50 0000005E                 endp
-   51 0000005E                 end
+   50 0000005C BD00            pop              {pc}
+   51 0000005E                 endp
+   52 0000005E                 end
               00 00 00000000 
               4000043C 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
@@ -90,7 +91,7 @@ fin 00000058
 
 Symbol: fin
    Definitions
-      At line 48 in file jouerson.s
+      At line 49 in file jouerson.s
    Uses
       At line 25 in file jouerson.s
 Comment: fin used once
