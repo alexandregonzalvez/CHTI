@@ -1,0 +1,89 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 thumb
+    2 00000000                 AREA             code_dft_partie_imaginaire, cod
+e, READONLY
+    3 00000000                 extern           TabSin
+    4 00000000                 export           somme_partie_imaginaire
+    5 00000000         
+    6 00000000         somme_partie_imaginaire
+                               proc
+    7 00000000         
+    8 00000000 4A0A            ldr              r2, =TabSin
+    9 00000002         
+   10 00000002 F04F 0700       mov              r7, #0
+   11 00000006 F04F 0300       mov              r3, #0
+   12 0000000A FB00 F403 
+                       db      mul              r4, r0, r3
+   13 0000000E F004 043F       and              r4, r4, #0x003f
+   14 00000012 F932 5014       ldrsh            r5, [r2, r4, lsl #1]
+   15 00000016 F931 6013       ldrsh            r6, [r1, r3, lsl #1]
+   16 0000001A FB05 7706       mla              r7, r5, r6, r7
+   17 0000001E F103 0301       add              r3, #1
+   18 00000022 2B40            cmp              r3, #64
+   19 00000024 DBF1            blt              db
+   20 00000026         
+   21 00000026 4638            mov              r0, r7
+   22 00000028         
+   23 00000028 4770            bx               lr
+   24 0000002A                 endp
+   25 0000002A                 end
+              00 00 00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\dft_partie_imaginaire.d -o.\obj\dft_partie_imaginaire.o -I.\
+RTE\_Simu -IC:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core
+\Include -IC:\Users\Mathieu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\De
+vice\Include --predefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --pred
+efine="__UVISION_VERSION SETA 529" --predefine="_RTE_ SETA 1" --predefine="STM3
+2F10X_MD SETA 1" --list=dft_partie_imaginaire.lst dft_partie_imaginaire.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+code_dft_partie_imaginaire 00000000
+
+Symbol: code_dft_partie_imaginaire
+   Definitions
+      At line 2 in file dft_partie_imaginaire.s
+   Uses
+      None
+Comment: code_dft_partie_imaginaire unused
+db 0000000A
+
+Symbol: db
+   Definitions
+      At line 12 in file dft_partie_imaginaire.s
+   Uses
+      At line 19 in file dft_partie_imaginaire.s
+Comment: db used once
+somme_partie_imaginaire 00000000
+
+Symbol: somme_partie_imaginaire
+   Definitions
+      At line 6 in file dft_partie_imaginaire.s
+   Uses
+      At line 4 in file dft_partie_imaginaire.s
+Comment: somme_partie_imaginaire used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+TabSin 00000000
+
+Symbol: TabSin
+   Definitions
+      At line 3 in file dft_partie_imaginaire.s
+   Uses
+      At line 8 in file dft_partie_imaginaire.s
+Comment: TabSin used once
+1 symbol
+341 symbols in table
