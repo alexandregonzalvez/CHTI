@@ -25,16 +25,16 @@ timer_callback proc
 	bhs fin
 	
 	;r7 = echantillon a traiter et jouer
-	ldrh r7, [r6, r4]
+	ldrsh r7, [r6, r4]
 	;operation sur les echantillons
 	;addition
-	add r7, #32768
-	;mise a l'echelle
-	mov r9, #65535
-	udiv r7, r7, r9
+	adds r7, #0x8000
+	;mise a l'echelle	
 	ldr r10, =E_RES
 	ldr r9, [r8, r10]
 	mul r7, r7, r9
+	mov r9, #0xffff
+	udiv r7, r7, r9
 	
 	;emission du son
 	ldr r9, =TIM3_CCR3
