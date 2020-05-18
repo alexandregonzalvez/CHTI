@@ -69,24 +69,42 @@ void sys_callback(){
 	if (m2ksig1_1 > M2TIR){
 		occurences[0]++;
 	}
+	else {
+		occurences[0] = 0;
+	}
 	if (m2ksig1_2 > M2TIR){
 		occurences[1]++;
 	}	
+	else {
+		occurences[1] = 0;
+	}
 	if (m2ksig1_3 > M2TIR){
 		occurences[2]++;
 	}	
+	else {
+		occurences[2] = 0;
+	}
 	if (m2ksig1_4 > M2TIR){
 		occurences[3]++;
 	}	
+	else {
+		occurences[3] = 0;
+	}
 	if (m2ksig1_5 > M2TIR){
 		occurences[4]++;
 	}	
+	else {
+		occurences[4] = 0;
+	}
 	if (m2ksig2 > M2TIR){
 		occurences[5]++;
 	}
+	else {
+		occurences[5] = 0;
+	}
 	
 	for (int i = 0; i < 6; i++){
-		if (occurences[i] > 18){
+		if (occurences[i] > 12){
 			occurences[i] = 0;
 			scores[i] ++;
 		}
