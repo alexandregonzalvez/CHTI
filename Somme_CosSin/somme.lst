@@ -1,0 +1,83 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 thumb
+    2 00000000                 AREA             code_somme, code, READONLY
+    3 00000000                 export           somme
+    4 00000000                 extern           TabSin
+    5 00000000                 extern           TabCos
+    6 00000000         
+    7 00000000         somme   proc
+    8 00000000 4A06            ldr              r2, =TabSin
+    9 00000002 4B07            ldr              r3, =TabCos
+   10 00000004         
+   11 00000004 F932 5010       ldrsh            r5, [r2, r0, lsl #1]
+   12 00000008 F933 6010       ldrsh            r6, [r3, r0, lsl #1]
+   13 0000000C         
+   14 0000000C FB05 F405       mul              r4, r5, r5
+   15 00000010 FB06 F506       mul              r5, r6, r6
+   16 00000014         
+   17 00000014 EB04 0005       add              r0, r4, r5
+   18 00000018         
+   19 00000018 4770            bx               lr
+   20 0000001A                 endp
+   21 0000001A                 end
+              00 00 00000000 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\somme.d -o.\obj\somme.o -I.\RTE\_Simu -IC:\Users\alexb\AppDa
+ta\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Users\alexb\AppData\
+Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__EVAL SET
+A 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 529" -
+-predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=somme.lst so
+mme.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+code_somme 00000000
+
+Symbol: code_somme
+   Definitions
+      At line 2 in file somme.s
+   Uses
+      None
+Comment: code_somme unused
+somme 00000000
+
+Symbol: somme
+   Definitions
+      At line 7 in file somme.s
+   Uses
+      At line 3 in file somme.s
+Comment: somme used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+TabCos 00000000
+
+Symbol: TabCos
+   Definitions
+      At line 5 in file somme.s
+   Uses
+      At line 9 in file somme.s
+Comment: TabCos used once
+TabSin 00000000
+
+Symbol: TabSin
+   Definitions
+      At line 4 in file somme.s
+   Uses
+      At line 8 in file somme.s
+Comment: TabSin used once
+2 symbols
+341 symbols in table

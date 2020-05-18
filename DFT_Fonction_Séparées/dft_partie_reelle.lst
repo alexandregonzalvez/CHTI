@@ -1,0 +1,88 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 thumb
+    2 00000000                 AREA             code_dft_partie_reelle, code, R
+EADONLY
+    3 00000000                 extern           TabCos
+    4 00000000                 export           somme_partie_reelle
+    5 00000000         
+    6 00000000         somme_partie_reelle
+                               proc
+    7 00000000 4A0A            ldr              r2, =TabCos
+    8 00000002         
+    9 00000002 F04F 0700       mov              r7, #0
+   10 00000006 F04F 0300       mov              r3, #0
+   11 0000000A FB00 F403 
+                       db      mul              r4, r0, r3
+   12 0000000E F004 043F       and              r4, r4, #0x003f
+   13 00000012 F932 5014       ldrsh            r5, [r2, r4, lsl #1]
+   14 00000016 F931 6013       ldrsh            r6, [r1, r3, lsl #1]
+   15 0000001A FB05 7706       mla              r7, r5, r6, r7
+   16 0000001E F103 0301       add              r3, #1
+   17 00000022 2B40            cmp              r3, #64
+   18 00000024 DBF1            blt              db
+   19 00000026         
+   20 00000026 4638            mov              r0, r7
+   21 00000028         
+   22 00000028 4770            bx               lr
+   23 0000002A                 endp
+   24 0000002A                 end
+              00 00 00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\dft_partie_reelle.d -o.\obj\dft_partie_reelle.o -I.\RTE\_Sim
+u -IC:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+ -IC:\Users\Mathieu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Inc
+lude --predefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="_
+_UVISION_VERSION SETA 529" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD
+ SETA 1" --list=dft_partie_reelle.lst dft_partie_reelle.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+code_dft_partie_reelle 00000000
+
+Symbol: code_dft_partie_reelle
+   Definitions
+      At line 2 in file dft_partie_reelle.s
+   Uses
+      None
+Comment: code_dft_partie_reelle unused
+db 0000000A
+
+Symbol: db
+   Definitions
+      At line 11 in file dft_partie_reelle.s
+   Uses
+      At line 18 in file dft_partie_reelle.s
+Comment: db used once
+somme_partie_reelle 00000000
+
+Symbol: somme_partie_reelle
+   Definitions
+      At line 6 in file dft_partie_reelle.s
+   Uses
+      At line 4 in file dft_partie_reelle.s
+Comment: somme_partie_reelle used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+TabCos 00000000
+
+Symbol: TabCos
+   Definitions
+      At line 3 in file dft_partie_reelle.s
+   Uses
+      At line 7 in file dft_partie_reelle.s
+Comment: TabCos used once
+1 symbol
+341 symbols in table
