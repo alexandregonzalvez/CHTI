@@ -1,4 +1,5 @@
 Dependencies for Project 'Project', Target 'Simu': (DO NOT MODIFY !)
+<<<<<<< HEAD
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
 F (.\Src\principal.c)(0x5EC2A7DE)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\GFSSP72 --C99-I.\RTE\_Simu-IC:\Users\Alexandre\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Alexandre\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F103xB -DUSE_FULL_LL_DRIVER-o .\obj\principal.o --omf_browse .\obj\principal.crf --depend .\obj\principal.d)
 I (..\GFSSP72\gfssp72.h)(0x5EC29ECE)
@@ -14,3 +15,20 @@ F (.\bruitverre.asm)(0x5EC2A5B5)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=
 F (.\jouerson.s)(0x5EC2AC6C)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Simu-IC:\Users\Alexandre\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Alexandre\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 530" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list jouerson.lst --xref -o .\obj\jouerson.o --depend .\obj\jouerson.d)
 F (.\Src\startup-rvds.s)(0x5EC2A5B5)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Simu-IC:\Users\Alexandre\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Alexandre\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 530" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list startup-rvds.lst --xref -o .\obj\startup-rvds.o --depend .\obj\startup-rvds.d)
 F (..\GFSSP72\gfssp72.lib)(0x5EC29ECE)()
+=======
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (.\Src\principal.c)(0x5EC29E9B)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\GFSSP72 --C99-I.\RTE\_Simu-IC:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Mathieu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER-o .\obj\principal.o --omf_browse .\obj\principal.crf --depend .\obj\principal.d)
+I (..\GFSSP72\gfssp72.h)(0x5EC29E5D)
+I (C:\Users\Mathieu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58259ADC)
+I (.\RTE\_Simu\RTE_Components.h)(0x5EC29E9B)
+I (C:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D25F326)
+I (D:\Programmes\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
+I (C:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D25F326)
+I (C:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25F326)
+I (C:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25F326)
+I (C:\Users\Mathieu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58259ADC)
+F (.\bruitverre.asm)(0x5EC29E9B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Simu-IC:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Mathieu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list bruitverre.lst --xref -o .\obj\bruitverre.o --depend .\obj\bruitverre.d)
+F (.\jouerson.s)(0x5EC29E9B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Simu-IC:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Mathieu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list jouerson.lst --xref -o .\obj\jouerson.o --depend .\obj\jouerson.d)
+F (.\Src\startup-rvds.s)(0x5EC29E9B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Simu-IC:\Users\Mathieu\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Mathieu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup-rvds.lst --xref -o .\obj\startup-rvds.o --depend .\obj\startup-rvds.d)
+F (..\GFSSP72\gfssp72.lib)(0x5EC29E5D)()
+>>>>>>> 5c81cb6119ea95401fe7f661d1b2b56f82bbcfe3
