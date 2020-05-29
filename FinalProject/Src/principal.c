@@ -21,7 +21,6 @@ int M2TIR = 1000000;
 
 
 // gestion du son
-
 void timer_callback(void);
 u32 Periode_PWM_en_Tck = 648;
 u32 Periode_en_Tck = 6552;
